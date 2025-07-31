@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Balance Tracker Design System - Financial Theme */
+
+@layer base {
+  :root {
+    /* Core Background & Text */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Financial Primary - Professional Blue */
+    --primary: 214 95% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 214 95% 45%;
+
+    /* Financial Secondary - Trust Green */
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Muted Elements */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - Success Green */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive - Financial Warning */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders & Inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 214 95% 35%;
+
+    /* Design System Variables */
+    --radius: 0.75rem;
+    
+    /* Financial App Specific */
+    --income: 142 76% 36%;
+    --expense: 0 84% 60%;
+    --balance: 214 95% 35%;
+    --debt: 25 95% 53%;
+    --asset: 262 83% 58%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 95% 35%), hsl(214 95% 45%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    --gradient-dashboard: linear-gradient(135deg, hsl(210 20% 98%), hsl(214 32% 95%));
+
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(214 95% 35% / 0.1), 0 2px 4px -1px hsl(214 95% 35% / 0.06);
+    --shadow-elevated: 0 10px 15px -3px hsl(214 95% 35% / 0.1), 0 4px 6px -2px hsl(214 95% 35% / 0.05);
+    --shadow-financial: 0 8px 25px -8px hsl(214 95% 35% / 0.25);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Financial Theme */
+    --background: 215 28% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 28% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 28% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 214 95% 50%;
+    --primary-foreground: 215 28% 8%;
+    --primary-glow: 214 95% 60%;
+
+    --secondary: 142 76% 46%;
+    --secondary-foreground: 215 28% 8%;
+
+    --muted: 215 28% 15%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 142 76% 46%;
+    --accent-foreground: 215 28% 8%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 215 28% 8%;
+
+    --border: 215 28% 18%;
+    --input: 215 28% 18%;
+    --ring: 214 95% 50%;
+
+    /* Dark Financial Colors */
+    --income: 142 76% 46%;
+    --expense: 0 84% 65%;
+    --balance: 214 95% 50%;
+    --debt: 25 95% 63%;
+    --asset: 262 83% 68%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 95% 50%), hsl(214 95% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 46%), hsl(142 76% 56%));
+    --gradient-card: linear-gradient(145deg, hsl(215 28% 10%), hsl(215 28% 12%));
+    --gradient-dashboard: linear-gradient(135deg, hsl(215 28% 8%), hsl(215 28% 12%));
+
+    /* Dark Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-elevated: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-financial: 0 8px 25px -8px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
